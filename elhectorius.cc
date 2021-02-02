@@ -1,17 +1,18 @@
 #include <iostream>
 using namespace std;
 
+string respuesta(string n) {
+    if (n == "elhectorius" || n == "si" || n == "Si" || n == "SI" || n == "sí" || n == "Sí" || n == "SÍ")
+        return "- Tremendo comedor de tula";
+    return "- Adelante Sr. Administrador";
+}
+
 int main() {
     string name;
 
     cout << "- Eres elhectorius?\n+ ";
     getline(cin, name);
-
-    if ("elhectorius" == name) {
-        cout << "- Tremendo comedor de tula" << endl;
-        return 0;
-    }
-    cout << "- Adelante don admin" << endl;
+    cout << respuesta(name) << endl;
 
     return 0;
 }
